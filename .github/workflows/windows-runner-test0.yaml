@@ -1,0 +1,63 @@
+name: windows-runner1-test
+
+on:
+  workflow_dispatch:
+  
+jobs:
+  windows-runner-test:
+    runs-on: [self-hosted,Windows,X64,i-00ed4af164ac2efb2]
+    steps:
+      # - name: Checkout code
+      #   uses: actions/checkout@v4
+      #   with:
+      #     repository: node-real/nr-test-demo
+      #     path: nr-test-demo
+      - name: test
+        run: |
+          #!/bin/bash
+          # dir
+          # cd nr-test-demo
+          & "C:\Program Files\nodejs\npm.cmd" -v
+          $(Get-Package -Name "Google Chrome").Version
+      
+      - name: test1
+        run: |
+          #!/bin/bash
+          # & "C:\Program Files\Amazon\AWSCLIV2\aws.exe" --version
+          # & "C:\Program Files\Amazon\AWSCLIV2\aws.exe" s3api get-object --bucket tf-nodereal-qa-test-center-be --key node-real/nr-test-demo/startWithTags/7325911114/common-test.json test
+          dir
+      # - name: Upload Changed Data
+      #   uses: actions/upload-artifact@v3
+      #   with:
+      #     name: "nr-test-demo"
+      #     path: |
+      #       nr-test-demo/
+      #     if-no-files-found: error
+      # - name: Download Changed Data
+      #   uses: actions/download-artifact@v3
+      #   with:
+      #     name: "nr-test-demo"
+      #     path: |
+      #       ./artifacts
+
+        
+                    
+          
+  # windows-runner-test:
+  #   runs-on: [self-hosted,Windows,X64,i-00ed4af164ac2efb2]
+  #   steps:
+  #     - name: clone
+  #       run: |
+  #         dir
+  #         cd .\nr-test-demo\
+  #         dir
+  #         & 'C:\Program Files\Git\bin\git.exe' -v
+  #         & 'C:\Program Files\Git\bin\git.exe' pull origin main
+  #       env:
+  #         TOKEN: ${{ secrets.CLONE_TOKEN }}
+  #     - name: test
+  #       run: |
+  #         dir
+  #         cd nr-test-demo
+  #         dir
+      
