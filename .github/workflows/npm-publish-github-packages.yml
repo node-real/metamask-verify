@@ -1,0 +1,47 @@
+name: metamask-release-verify
+
+on:
+  workflow_dispatch:
+    inputs:
+      metamask_version:
+        required: true
+
+jobs:
+  windows-runner-test:
+    env:
+      RUN_ID: ${{ github.run_id }}
+      METAMASK_VERSION: ${{ inputs.metamask_version }}
+      PRIVATE_KEY: ${{ secrets.METAMASK_ACCOUNT_1_PK }}
+    runs-on: [self-hosted,Windows,X64,i-0eecb8fd86b35108f]
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          repository: node-real/nr-test-demo
+          path: nr-test-demo
+          
+      - name: run test
+        run: | 
+          #!/bin/bash
+          echo "*******"
+          echo "${{ inputs.metamask_version }}"
+          echo %RUN_ID%
+          echo "*******"
+          dir
+          cd .\nr-test-demo\
+          cd metamask_test
+
+          & "C:\Program Files\nodejs\yarn.cmd" -v
+          & "C:\Program Files\nodejs\yarn.cmd"
+          # & "C:\Program Files\nodejs\yarn.cmd" test
+          
+          $counter = 1
+          do {
+            & "C:\Program Files\nodejs\yarn.cmd" test
+            if ($LASTEXITCODE -eq 0) {  
+                echo "run test succeed!"  
+                exit 0
+            }else {
+              $counter++
+            }
+          } while ($counter -le 3)
