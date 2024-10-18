@@ -18,7 +18,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: node-real/metamask-verify
-          path: nr-test-demo
+          path: metamask-verify
           
       - name: run test
         run: | 
