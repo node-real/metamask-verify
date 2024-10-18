@@ -18,4 +18,4 @@ result/
 *.html
 *.log
 *.DS_store
-/node_modules
+node_modules/
