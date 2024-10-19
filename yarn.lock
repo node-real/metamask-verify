@@ -432,10 +432,10 @@
   dependencies:
     playwright "1.47.2"
 
-"@robertw07/synpress@^0.0.6":
-  version "0.0.6"
-  resolved "https://registry.npmjs.org/@robertw07/synpress/-/synpress-0.0.6.tgz"
-  integrity sha512-2B/hNo1eexFqPN+IlAHnOaOHmH6eX6nMtq56Feu0dDiKxYkCdQMcvhNj+OCAVu9v8CuZdVzE7OY2PfFjYxlQSg==
+"@robertw07/synpress@^0.0.21":
+  version "0.0.21"
+  resolved "https://registry.yarnpkg.com/@robertw07/synpress/-/synpress-0.0.21.tgz#5e3970f0a7d203f25aaed8634505e73b5483de04"
+  integrity sha512-rpjLvvCzic1Qc/p3+XjERrHZqz9fFwTopalP7pR2fvJkypc33tB8aGUqkg8qDo3879ZtU13n90BLQ+akcF+1nA==
   dependencies:
     "@cypress/code-coverage" "^3.11.0"
     "@cypress/webpack-dev-server" "^3.5.2"
@@ -2155,7 +2155,7 @@ dotenv-parse-variables@^2.0.0:
 
 dotenv@^16.3.1, dotenv@^16.4.5:
   version "16.4.5"
-  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-16.4.5.tgz#cdd3b3b604cb327e286b4762e13502f717cb099f"
+  resolved "https://registry.npmjs.org/dotenv/-/dotenv-16.4.5.tgz"
   integrity sha512-ZmdL2rui+eB2YwhsWzjInR8LldtZHGDoQ1ugH85ppHKwpUHL7j7rN0Ti9NCnGiQbhaZ11FpR+7ao1dNsmduNUg==
 
 download@^8.0.0:
@@ -2808,7 +2808,7 @@ fs.realpath@^1.0.0:
 
 fs@^0.0.1-security:
   version "0.0.1-security"
-  resolved "https://registry.yarnpkg.com/fs/-/fs-0.0.1-security.tgz#8a7bd37186b6dddf3813f23858b57ecaaf5e41d4"
+  resolved "https://registry.npmjs.org/fs/-/fs-0.0.1-security.tgz"
   integrity sha512-3XY9e1pP0CVEUCdj5BmfIZxRBTSDycnbqhIOGec9QYtmVH2fbLpj86CFWkrNOkt/Fvty4KZG5lTglL9j/gJ87w==
 
 fsevents@2.3.2, fsevents@~2.3.2:

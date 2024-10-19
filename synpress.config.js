@@ -5,8 +5,8 @@ module.exports = defineConfig({
   e2e: {
     specPattern: 'tests/e2e/specs',
     supportFile: 'tests/support/index.js',
-    videosFolder: 'result/e2e/videos',
-    screenshotsFolder: 'result/e2e/screenshots',
+    videosFolder: 'result/videos',
+    screenshotsFolder: 'result/screenshots',
     // video: true,
     screenshotOnRunFailure: true,
     setupNodeEvents(on, config) {
